@@ -3,6 +3,7 @@ x = (-1:0.2:1)';
 A = [x.^3, x.^2, x, ones(length(x), 1)];
 f = fracFunc(x);
 %b = inv(A)*f;
+% 习题课上讲解没有考虑稳定性，这里已修改
 bfit = (A'*A)\(A'*f);
 
 evalf = A*bfit;
